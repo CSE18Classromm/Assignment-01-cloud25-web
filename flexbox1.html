@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        body{
+            margin:0;
+            padding:0;
+        }
+        html,*{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+        main{
+            width:1200px;
+            height:auto;
+            background-color: antiquewhite;
+            margin: 0 auto;
+            display:flex;
+            flex-direction: column;
+            gap:10px;
+        }
+        nav,header,article,footer{
+            background-color: rgb(27, 53, 70); height:140px; text-align: center; line-height: 140px;
+        }
+        section{
+            height:300px; text-align: center;
+            display:flex;
+            flex-direction: row;
+            gap: 10px;
+        }
+        .box{
+            flex-grow: 1;
+            background-color: rgb(143, 90, 41);
+            line-height: 300px;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <nav><h2>Navigation</h2></nav>
+        <header><h2>Header</h2></header>
+        <article><h2>Inter text area</h2></article>
+        <section>
+            <div class="box"><h2>BOX1</h2></div>
+            <div class="box"><h2>BOX2</h2></div>
+            <div class="box"><h2>BOX3</h2></div>
+        </section>
+        <footer><h2>Footer</h2></footer>
+    </main>
+</body>
+</html>
