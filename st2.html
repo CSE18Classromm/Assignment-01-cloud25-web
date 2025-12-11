@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid layout</title>
+    <style>
+        html,*{
+            padding:0;
+            margin:0;
+        }
+        main{
+            margin:30px;
+            width:80%;
+            height:auto;
+            background-color: rgb(218, 218, 205);
+        }
+        article{
+            display:grid;
+            grid-template-columns:repeat(4,1fr) ;
+            gap:20px;
+            padding:10px;
+        }
+        .box{
+            background-color:rgb(173, 152, 152);
+            font-size:20px;
+            gap:20px;
+            padding:20px;
+            height:200px;
+            text-align:center;
+            border: 5px solid white;
+        }
+        .box img{
+            width:100%;
+            height:80px;
+            object-fit: contain;
+            margin-top:10px;
+        }
+        section{
+            padding:10px;
+            height:150px;
+            font-size:5vw;
+            text-align:center;
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        #second{
+            display:grid;
+            grid-template-columns:(3,1fr);
+            gap:20px;
+        }
+        .box2{
+            background-color: lightpink;
+            padding:20px;
+            height:50px;
+            font-size: 20px;
+            font-weight:bold;
+        }
+        @media screen and (max-width:1204px){
+            article{
+                grid-template-columns: repeat(2,1fr);
+            }
+        }
+         @media screen and (max-width:600px){
+            #second{
+                grid-template-columns: 1fr;
+                padding:30px;
+                gap:20px;
+            }
+            section{
+                height:30px;
+                padding: 13px auto;
+            }
+        }
+        </style>
+</head>
+<body>
+    <main>
+        <div id="second">
+        <div class="box2">HOME</div>
+        <div class="box2">MENU</div>
+        <div class="box2">DISCOUNTS</div>
+        </div>
+        <section>SHOPEASY</section>
+        <article>
+        <div class="box">PRODUCT 1 <br><img src="imag1.png"><br><br>&#8377;759</div>
+        <div class="box">PRODUCT 2 <br><img src="imag2.png"><br><br>&#8377;600</div>
+        <div class="box">PRODUCT 3 <br><img src="imag3.png"><br><br>&#8377;600</div>
+        <div class="box">PRODUCT 4 <br><img src="imag4.png"><br><br>&#8377;600</div>
+        </article>
+   </main>   
+</body>
+</html>
